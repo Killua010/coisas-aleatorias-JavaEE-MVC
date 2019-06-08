@@ -1,0 +1,61 @@
+CREATE database coisasAleatorias;
+
+use coisasAleatorias;
+
+CREATE TABLE tb_produto (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+valor FLOAT,
+descricao VARCHAR(1000),
+foto VARCHAR(50),
+categoria_id INTEGER
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_categoria (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+foto VARCHAR(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_cliente (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+sobrenome VARCHAR(50),
+usuario_id INTEGER
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_usuario (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+email VARCHAR(100),
+senha VARCHAR(50),
+papel VARCHAR(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_fale_conosco (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+email VARCHAR(100),
+assunto VARCHAR(500),
+nome VARCHAR(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_pedido (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+valor FLOAT,
+cliente_id INTEGER
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE tb_item_pedido (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+quantidade INTEGER,
+produto_id INTEGER,
+pedido_id INTEGER
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `tb_cliente` ADD CONSTRAINT `fk_usuario_id` FOREIGN KEY ( `usuario_id` ) REFERENCES `tb_usuario` ( `id` ) ;
+
+ALTER TABLE `tb_item_pedido` ADD CONSTRAINT `fk_produto_id` FOREIGN KEY ( `produto_id` ) REFERENCES `tb_produto` ( `id` ) ;
+
+ALTER TABLE `tb_item_pedido` ADD CONSTRAINT `fk_pedito_id` FOREIGN KEY ( `pedido_id` ) REFERENCES `tb_pedido` ( `id` ) ;
+
+ALTER TABLE `tb_pedido` ADD CONSTRAINT `fk_cliente_id` FOREIGN KEY ( `cliente_id` ) REFERENCES `tb_cliente` ( `id` ) ;
+

@@ -1,0 +1,182 @@
+img {
+    transition: 1s;
+}
+
+.zoom {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.zoom:hover img {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 991px) {
+    .pb-response{
+        padding-bottom: 1.5rem !important;
+    }
+
+    .follow-us-content {
+        margin-left: 25% !important;
+    }
+
+    .social-left{
+        margin-left: 20% !important;
+    }
+
+    .follow-us-padding{
+        padding-top: 3rem !important;
+    }
+
+    .justify-content-md-center {
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #slide-2, #slide-1 {
+        display: block !important;
+
+    }
+}
+
+.follow-us-parallax{
+    background-image: url("https://images.pexels.com/photos/267403/pexels-photo-267403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+     /* Set a specific height */
+    min-height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.follow-us-content {
+    color: #fff;
+    margin-left: 55%;
+}
+
+.social-left{
+    margin-left: 50%;
+}
+
+.follow-us-padding{
+    padding-top: 8rem;
+}
+
+.profile-page .page-header {
+    min-height: 300px;
+}
+
+.card-border{
+    box-shadow: 0 0px 3px 0 rgba(0,0,0,.2) !important;
+}
+
+.margin-top-navbar{
+    margin-top: 5rem;
+}
+
+.product{
+    height: 200px !important;
+    width: 200px !important;
+    position: sticky;
+}
+
+.category-carousel{
+    width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+#slide-2{
+    padding-bottom: 20%;
+    padding-left: 30%;
+}
+
+#slide-1{
+    padding-bottom: -20%;
+    padding-right: 35%;
+}
+
+.product-animation{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-animation .description-box{
+    background-color: rgba(0, 0, 0, 0.479);
+    margin: auto;
+    margin-top: -216.5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
+}
+
+.product-animation .description {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-animation:hover .description-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-animation:hover img {
+    filter:blur(2px) grayscale(100%);
+}
+
+.background-img{
+    background-image: url("../img/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+.no-color-top {
+    margin-top:0;
+    background-color: transparent;
+}
+
+textarea {
+    border-radius: 30px !important;
+    border: 1px solid #e3e3e3 !important;
+}
+
+textarea:focus{
+    border-color: rgb(249, 99, 50) !important;
+}
+
+.card-body label{
+    text-align: left;
+    color: black;
+}
+.icone-login{
+  margin-left:4px;
+  color: #6c757da3;
+}
+
+.scrollInicial::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 3px #00bcd4;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scrollInicial::-webkit-scrollbar {
+	width: 10px;
+	background-color: white;
+}
+
+.scrollInicial::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px #f46232;
+	background-color: #f46232;
+}
